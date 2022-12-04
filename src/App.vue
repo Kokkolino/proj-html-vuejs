@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <HeaderComp/>
+    <MainComp/>
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/HeaderComp.vue'
+import MainComp from './components/MainComp.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComp
+    HeaderComp,
+    MainComp,
   }
 }
 </script>
@@ -33,8 +36,8 @@ export default {
   width: 100%;
 }
 
-.w-70{
-  width: 70%;
+.w-50{
+  width: 50%;
   margin: auto;
 }
 
@@ -42,10 +45,19 @@ export default {
   height: 100%;
 }
 
+.p-10{
+  padding: 10px;
+}
 // flex
 .f-bw{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.sprites{
+    height: 32px;
+    width: 32px;
+  }
+
 </style>
