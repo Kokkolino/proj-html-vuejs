@@ -11,18 +11,23 @@
         title="How to Enroll Child to a Class?"
         btn="LEARN MORE >"
         />
+        <SectSplitter
+        title="Welcome to Fable"
+        description="Fable daycare, preschool, and kindergarten"/>
     </div>
 </template>
 
 <script>
 import SliderElem from "./elements/SliderElem.vue"
 import PatternBadge from "./elements/PatternBadge.vue"
+import SectSplitter from "./elements/SectSplitter.vue"
 
     export default {
         name: 'MainComp',
         components: {
             SliderElem,
             PatternBadge,
+            SectSplitter,
         },
         data(){
             return {

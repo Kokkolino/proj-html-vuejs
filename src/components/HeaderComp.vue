@@ -52,10 +52,6 @@ export default {
           img : "img/envelope.png",
           title: "Contact"
         }
-
-
-
-
       ]
     }
   }
@@ -64,10 +60,10 @@ export default {
 
 <style scoped lang="scss">
   div{
-    height: 130px;
+    height: 150px;
   }
   #logo{
-    height: 80px;
+    height: 120px;
   }
   // sprites
   .sprites{

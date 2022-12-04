@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
     section{
-        height: 120px;
+        height: 150px;
         background-image: url("../../assets/img/pattern.png");
         color: white;
     }
