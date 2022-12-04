@@ -1,7 +1,7 @@
 <template>
-    <section id="container" class="w-50 f-bw">
+    <section id="container" class="w-100 f-bw">
         <!-- first circle -->
-        <div>
+        <div class="elemContainer">
             <div class="circles" :class="[circles[0].border == true ? 'bordered' : 'borderless']" :style="{backgroundColor: circles[0].bg}">
                 <img v-if="circles[0].img==true" :src="require(`../../assets/img${circles[0].imgPath}`)">
                 <h1 v-else>{{circles[0].innerh}}</h1>
@@ -14,7 +14,7 @@
             </p>
         </div>
         <!-- second circle -->
-        <div>
+        <div class="elemContainer">
             <div class="circles" :class="[circles[1].border == true ? 'bordered' : 'borderless']" :style="{border:circles[1].bord, backgroundColor: circles[1].bg}">
                 <img v-if="circles[1].img==true" :src="require(`../../assets/img${circles[1].imgPath}`)">
                 <h1 v-else>{{circles[1].innerh}}</h1>
@@ -27,7 +27,7 @@
             </p>
         </div>
         <!-- third circle -->
-        <div>
+        <div class="elemContainer">
             <div class="circles" :class="[circles[2].border == true ? 'bordered' : 'borderless']" :style="{border:circles[2].bord, backgroundColor: circles[2].bg}">
                 <img v-if="circles[2].img==true" :src="require(`../../assets/img${circles[2].imgPath}`)">
                 <h1 v-else>{{circles[2].innerh}}</h1>
@@ -40,7 +40,7 @@
             </p>
         </div>
         <!-- fourth circle -->
-        <div>
+        <div class="elemContainer">
             <div class="circles" :class="[circles[3].border == true ? 'bordered' : 'borderless']" :style="{border:circles[3].bord, backgroundColor: circles[3].bg}">
                 <img v-if="circles[3].img==true" :src="require(`../../assets/img${circles[3].imgPath}`)">
                 <h1 v-else>{{circles[3].innerh}}</h1>
@@ -76,6 +76,7 @@
     #container {
         gap: 20px;
         align-items: flex-start;
+        margin-bottom: 25px;
     }
 
     .circles{
@@ -99,4 +100,7 @@
         margin: 15px 0;
     }
 
+    .elemContainer{
+        width: 150px;
+    }
 </style>

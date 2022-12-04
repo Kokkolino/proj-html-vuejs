@@ -14,9 +14,11 @@
         <SectSplitter
         title="Welcome to Fable"
         description="Fable daycare, preschool, and kindergarten"/>
-        <CirclesElem
-        :circles="circles1"
-        />
+        <div class="w-50">
+            <CirclesElem
+            :circles="circles1"
+            />
+        </div>
     </div>
 </template>
 

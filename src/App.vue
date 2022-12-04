@@ -37,7 +37,7 @@ export default {
 }
 
 .w-50{
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
