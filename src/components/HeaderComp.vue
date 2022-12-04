@@ -64,18 +64,12 @@ export default {
 
 <style scoped lang="scss">
   div{
-    height: 100px;
+    height: 130px;
   }
   #logo{
     height: 80px;
   }
   // sprites
-  #contacts{
-    background: url("../assets/img/envelope.png") 0 0;
-  }
-
-
-
   .sprites{
     height: 32px;
     width: 32px;

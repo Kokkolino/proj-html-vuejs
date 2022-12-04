@@ -1,19 +1,53 @@
 <template>
     <div>
-        <SliderElem/>
+        <section id="slider3">
+            <div>
+                <SliderElem
+                :slides="slide1"
+                />
+            </div>
+        </section>
+        <PatternBadge
+        title="How to Enroll Child to a Class?"
+        btn="LEARN MORE >"
+        />
     </div>
 </template>
 
 <script>
 import SliderElem from "./elements/SliderElem.vue"
+import PatternBadge from "./elements/PatternBadge.vue"
+
     export default {
         name: 'MainComp',
         components: {
-            SliderElem
+            SliderElem,
+            PatternBadge,
+        },
+        data(){
+            return {
+                slide1: [
+                    "/img/slider_slide3_img1.png",
+                    "/img/slider_slide3_img2.png",
+                    "/img/slider_slide3_img3.png",
+                ]
+            }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-
+    #slider3{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 55vh;
+        width: 100%;
+        background-image: url("../assets/img/slider_slide3_background.png");
+        background-size: contain;
+        div{
+            width: 300px; 
+            height: 300px;
+        }
+    }
 </style>
