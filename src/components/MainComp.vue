@@ -14,6 +14,9 @@
         <SectSplitter
         title="Welcome to Fable"
         description="Fable daycare, preschool, and kindergarten"/>
+        <CirclesElem
+        :circles="circles1"
+        />
     </div>
 </template>
 
@@ -21,6 +24,7 @@
 import SliderElem from "./elements/SliderElem.vue"
 import PatternBadge from "./elements/PatternBadge.vue"
 import SectSplitter from "./elements/SectSplitter.vue"
+import CirclesElem from "./elements/CirclesElem.vue"
 
     export default {
         name: 'MainComp',
@@ -28,6 +32,7 @@ import SectSplitter from "./elements/SectSplitter.vue"
             SliderElem,
             PatternBadge,
             SectSplitter,
+            CirclesElem,
         },
         data(){
             return {
@@ -35,6 +40,60 @@ import SectSplitter from "./elements/SectSplitter.vue"
                     "/img/slider_slide3_img1.png",
                     "/img/slider_slide3_img2.png",
                     "/img/slider_slide3_img3.png",
+                ],
+                circles1: [
+                    {
+                        border: false,
+                        bg: "#fe6601",
+                        img: true,
+                        imgPath: "/schoolbag_alt.png",
+                        innerh: null,
+                        hcolor: "#554e9e",
+                        hopacity: "1",
+                        title: "Morbi Etos",
+                        dcolor: "black",
+                        dopacity: "0.5",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet urna vel metus suscipit mattis. "
+                    },
+                    {
+                        border: false,
+                        bg: "#554e9e",
+                        img: true,
+                        imgPath: "/stroller_alt.png",
+                        innerh: null,
+                        hcolor: "#554e9e",
+                        hopacity: "1",
+                        title: "Congue Gravida",
+                        dcolor: "black",
+                        dopacity: "0.5",
+                        description: "Morbi vestibulum ante sem, vel ullamcorper lectus dignissim eget. Proin ut ligula a purus commodo malesuada id et purus."
+                    },
+                    {
+                        border: false,
+                        bg: "#fe6601",
+                        img: true,
+                        imgPath: "/globe_alt.png",
+                        innerh: null,
+                        hcolor: "#554e9e",
+                        hopacity: "1",
+                        title: "Maecenas Node",
+                        dcolor: "black",
+                        dopacity: "0.5",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet urna vel metus suscipit mattis. "
+                    },
+                    {
+                        border: false,
+                        bg: "#554e9e",
+                        img: true,
+                        imgPath: "/bell_alt.png",
+                        innerh: null,
+                        hcolor: "#554e9e",
+                        hopacity: "1",
+                        title: "Praesent Morbi",
+                        dcolor: "black",
+                        dopacity: "0.5",
+                        description: "Morbi vestibulum ante sem, vel ullamcorper lectus dignissim eget. Proin ut ligula a purus commodo malesuada id et purus."
+                    }
                 ]
             }
         }
