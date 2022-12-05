@@ -76,7 +76,7 @@
     #container {
         gap: 20px;
         align-items: flex-start;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 
     .circles{

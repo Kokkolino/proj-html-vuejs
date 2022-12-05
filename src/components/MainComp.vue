@@ -1,12 +1,14 @@
 <template>
     <div>
-        <section id="slider3">
+        <!-- sliders 1 -->
+        <section id="slider1">
             <div>
                 <SliderElem
                 :slides="slide1"
                 />
             </div>
         </section>
+        <!-- badge -->
         <PatternBadge
         title="How to Enroll Child to a Class?"
         btn="LEARN MORE >"
@@ -14,11 +16,19 @@
         <SectSplitter
         title="Welcome to Fable"
         description="Fable daycare, preschool, and kindergarten"/>
+        <!-- circles section -->
         <div class="w-50">
             <CirclesElem
             :circles="circles1"
             />
         </div>
+        <!-- Our mission section -->
+        <section class="w-100" style="background-color: #e8e6e7; padding-top: 30px;">
+            <div class="w-50">
+                <OurMission/>
+            </div>
+        </section>
+        
     </div>
 </template>
 
@@ -27,6 +37,7 @@ import SliderElem from "./elements/SliderElem.vue"
 import PatternBadge from "./elements/PatternBadge.vue"
 import SectSplitter from "./elements/SectSplitter.vue"
 import CirclesElem from "./elements/CirclesElem.vue"
+import OurMission from "./elements/OurMission.vue"
 
     export default {
         name: 'MainComp',
@@ -35,6 +46,7 @@ import CirclesElem from "./elements/CirclesElem.vue"
             PatternBadge,
             SectSplitter,
             CirclesElem,
+            OurMission
         },
         data(){
             return {
@@ -103,7 +115,7 @@ import CirclesElem from "./elements/CirclesElem.vue"
 </script>
 
 <style lang="scss" scoped>
-    #slider3{
+    #slider1{
         display: flex;
         justify-content: center;
         align-items: flex-end;
