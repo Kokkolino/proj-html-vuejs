@@ -2,11 +2,11 @@
     <div id="container">
         <div id="imgSection">
             <!-- left arrow -->
-            <div id="left" class="arrow"><img src="../../assets/img/go_to_top.png" alt=""></div>
+            <div id="left" @click="slideLeft()" class="arrow"><img src="../../assets/img/go_to_top.png" alt=""></div>
             <!-- img -->
             <img :src="require(`../../assets${photos[position]}`) ">
             <!-- right arrow -->
-            <div id="right" class="arrow">
+            <div id="right" class="arrow" @click="slideRight()">
                 <img src="../../assets/img/go_to_top.png" alt="">
             </div>
         </div>
@@ -40,6 +40,55 @@
                 ]
             }
         },
+        methods:{
+            slideLeft(){
+            const max = this.photos.length - 1;
+           
+            
+            if(this.before == 0){
+                this.before = max;
+            }
+            else{
+                this.before--;
+            }
+
+            if(this.position == 0){
+                this.position = max;
+            }
+            else{
+                this.position--;
+            }
+
+            if(this.after == 0){
+                return this.after = max;
+            }
+            return this.after--;
+            },
+
+            slideRight(){
+            const max = this.photos.length - 1;
+            if(this.before == max){
+                this.before = 0;
+            }
+            else{
+                this.before++;
+            }
+
+            if(this.position == max){
+                this.position = 0;
+            }
+            else{
+                this.position++;
+            }
+
+            if(this.after == max){
+                return this.after = 0;
+            }
+            return this.after++;
+
+            }
+
+        }
         
     }
 </script>

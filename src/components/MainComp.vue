@@ -5,6 +5,7 @@
             <div>
                 <SliderElem
                 :slides="slide1"
+                color="#fe6601"
                 />
             </div>
         </section>
@@ -28,6 +29,13 @@
                 <OurMission/>
             </div>
         </section>
+        <!-- Our Pupils -->
+        <section id="pupils">
+            <ParallaxElem
+            :slides="slide2"
+            color="white"
+            :circles="circles2"/>
+        </section>
         
     </div>
 </template>
@@ -38,6 +46,7 @@ import PatternBadge from "./elements/PatternBadge.vue"
 import SectSplitter from "./elements/SectSplitter.vue"
 import CirclesElem from "./elements/CirclesElem.vue"
 import OurMission from "./elements/OurMission.vue"
+import ParallaxElem from "./elements/ParallaxElem.vue"
 
     export default {
         name: 'MainComp',
@@ -46,7 +55,8 @@ import OurMission from "./elements/OurMission.vue"
             PatternBadge,
             SectSplitter,
             CirclesElem,
-            OurMission
+            OurMission,
+            ParallaxElem
         },
         data(){
             return {
@@ -108,8 +118,68 @@ import OurMission from "./elements/OurMission.vue"
                         dopacity: "0.5",
                         description: "Morbi vestibulum ante sem, vel ullamcorper lectus dignissim eget. Proin ut ligula a purus commodo malesuada id et purus."
                     }
-                ]
+                ],
+                slide2:[
+                    "/img/parallax_01.jpg",
+                    "/img/parallax_02.jpg"
+                ],
+                circles2: [
+                    {
+                        border: true,
+                        bg: null,
+                        img: false,
+                        imgPath: null,
+                        innerh: "507",
+                        hcolor: "white",
+                        hopacity: "1",
+                        title: "Our Pupils",
+                        dcolor: "white",
+                        dopacity: "1",
+                        description: "Aenean imperdiet urna vel metus suscipit mattis. "
+                    },
+                    {
+                        border: true,
+                        bg: null,
+                        img: false,
+                        imgPath: null,
+                        innerh: "235",
+                        hcolor: "white",
+                        hopacity: "1",
+                        title: "Teaching Hours",
+                        dcolor: "white",
+                        dopacity: "1",
+                        description: "Proin ut ligula a purus commodo malesuada id et purus."
+                    },
+                    {
+                        border: true,
+                        bg: null,
+                        img: false,
+                        imgPath: null,
+                        innerh: "100%",
+                        hcolor: "white",
+                        hopacity: "1",
+                        title: "Satified Parents",
+                        dcolor: "white",
+                        dopacity: "1",
+                        description: "Aenean imperdiet urna vel metus suscipit mattis. "
+                    },
+                    {
+                        border: true,
+                        bg: null,
+                        img: false,
+                        imgPath: null,
+                        innerh: "1050",
+                        hcolor: "white",
+                        hopacity: "1",
+                        title: "Meals Per Year",
+                        dcolor: "white",
+                        dopacity: "1",
+                        description: "Proin ut ligula a purus commodo malesuada id et purus."
+                    }
+                ],
+
             }
+
         }
     }
 </script>
@@ -127,5 +197,19 @@ import OurMission from "./elements/OurMission.vue"
             width: 300px; 
             height: 300px;
         }
+    }
+
+    #pupils{
+        height: 50vh;
+        width: 100%;
+    }
+
+    #parallax{
+        height: 100%;
+        z-index: -1;
+    }
+
+    #wcircles{
+        z-index: 2;
     }
 </style>

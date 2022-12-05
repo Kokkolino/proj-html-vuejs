@@ -70,7 +70,7 @@ import MissionSlider from "./MissionSlider.vue"
             return {
                 pointer: 1,
             }
-        }
+        },
     }
 </script>
 
