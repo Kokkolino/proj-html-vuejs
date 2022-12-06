@@ -1,5 +1,5 @@
 <template>
-    <section id="container" class="w-100 f-bw">
+    <section id="container" class="w-100 f-bw" :class="[wrap == 'wrap' ? 'wrap' : '']">
         <!-- first circle -->
         <div class="elemContainer" v-for="(element, index) in circles" :key="index">
             <div class="circles" :class="[element.border == true ? 'bordered' : 'borderless']" :style="{backgroundColor: element.bg}">
@@ -21,7 +21,8 @@
     export default {
         name: 'CirclesElem',
         props: {
-            circles: Array
+            circles: Array,
+            wrap: String,
         },
         data(){
             return{
@@ -38,6 +39,13 @@
         margin-bottom: 50px;
     }
 
+    .wrap{
+        flex-wrap: wrap;
+        .elemContainer{
+            flex-basis: calc(50% - 20px);
+        }
+    }
+
     .circles{
         border-radius: 50%;
         height: 150px;
@@ -45,6 +53,7 @@
        display: flex;
        justify-content: center;
        align-items: center;
+       margin: auto;
     }
 
     .bordered{
