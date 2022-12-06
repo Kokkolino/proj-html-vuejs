@@ -124,15 +124,28 @@
         title="What's New"
         description="Keep up to date with the latest news"/>
         <!-- News -->
-        <section id="news" class="w-50">
-            <NewsCard
-            class="news-card"
-            v-for="(elem, index) in news1"
-            :key="index"
-            :news="elem"
-            size="(100% / 3) - 15px"
-            />
+        <section id="blog" class="w-50">
+            <div id="news">
+                <NewsCard
+                class="news-card"
+                v-for="(elem, index) in news1"
+                :key="index"
+                :news="elem"
+                />
+            </div>
+            <div>
+                <button>
+                    GO TO BLOG >
+                </button>
+            </div>
         </section>
+        <!-- maps -->
+        <section style="height: 380px; margin-bottom: 60px;">
+            <MapElem/>
+        </section>
+        <SectSplitter
+        title="Contact Us"
+        description="Our postal address and contact details"/>
     </div>
 </template>
 
@@ -147,6 +160,7 @@ import CardsElem from "./elements/CardsElem.vue"
 import StaffCard from "./elements/StaffCard.vue"
 import ParallaxElem2 from "./elements/ParallaxElem2.vue"
 import NewsCard from "./elements/NewsCard.vue"
+import MapElem from "./elements/MapElem.vue"
 
     export default {
         name: 'MainComp',
@@ -161,6 +175,7 @@ import NewsCard from "./elements/NewsCard.vue"
             StaffCard,
             ParallaxElem2,
             NewsCard,
+            MapElem
         },
         data(){
             return {
@@ -463,6 +478,35 @@ import NewsCard from "./elements/NewsCard.vue"
                         article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
                     }
 
+                ],
+                mapPuzzle: [
+                    "/vt.png",
+                    "/vt (1).png",
+                    "/vt (2).png",
+                    "/vt (3).png",
+                    "/vt (4).png",
+                    "/vt (5).png",
+                    "/vt (6).png",
+                    "/vt (7).png",
+                    "/vt (8).png",
+                    "/vt (9).png",
+                    "/vt (10).png",
+                    "/vt (11).png",
+                    "/vt (12).png",
+                    "/vt (13).png",
+                    "/vt (14).png",
+                    "/vt (15).png",
+                    "/vt (16).png",
+                    "/vt (17).png",
+                    "/vt (18).png",
+                    "/vt (19).png",
+                    "/vt (20).png",
+                    "/vt (21).png",
+                    "/vt (22).png",
+                    "/vt (23).png",
+                    "/vt (24).png",
+                    "/vt (25).png",
+                    "/vt (26).png",
                 ]
             }
             
@@ -624,5 +668,26 @@ import NewsCard from "./elements/NewsCard.vue"
     }
     .news-card{
         width: calc((100% / 3) - 100px);
+    }
+
+    #blog{
+        margin-bottom: 50px;
+        button{
+            padding: 10px;
+            color: white;
+            border: none;
+            background-color: #fe6601;
+            cursor: pointer;
+        }
+    }
+    #map{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 750px;
+        img{
+            width: 250px;
+            height: 250px;
+        }
     }
 </style>
