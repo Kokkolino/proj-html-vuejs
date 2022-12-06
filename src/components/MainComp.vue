@@ -87,6 +87,52 @@
                 </div>
             </section>
         </section>
+        <!-- splitter img -->
+        <section id="splitterImg">
+            <img src="../assets/img/gallery_01-690x506.jpg" alt="">
+            <img src="../assets/img/gallery_02-690x506.jpg" alt="">
+            <img src="../assets/img/gallery_03-690x506.jpg" alt="">
+            <img src="../assets/img/gallery_04-690x506.jpg" alt="">
+        </section>
+        <PatternBadge
+        title="See Our Kindergarten Photo Gallery"
+        btn="VIEW GALLETY >"
+        />
+        <SectSplitter
+        title="Meet Our Staff"
+        description="With education and experience in early childhood care"/>
+        <section class="w-50">
+            <div id="staffTop">
+                <h1>Our staff consists of three teachers and one assistant with experience in early childhood care</h1>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat nostrum dolor beatae, blanditiis dolorum, ut alias sapiente velit architecto, necessitatibus reiciendis at porro earum quisquam doloremque aspernatur rem ea animi.</p>
+            </div>
+            <div id="staffBot">
+                <StaffCard
+                v-for="(elem, index) in staff"
+                :key="index"
+                :card="elem"/>
+            </div>
+        </section>
+        <section style="height: 50vh;">
+            <ParallaxElem2
+            :slides="slide3"
+            :quotes="quotes"
+            color="white"/>
+        </section>
+        <SectSplitter
+        title="What's New"
+        description="Keep up to date with the latest news"/>
+        <!-- News -->
+        <section id="news" class="w-50">
+            <NewsCard
+            class="news-card"
+            v-for="(elem, index) in news1"
+            :key="index"
+            :news="elem"
+            size="(100% / 3) - 15px"
+            />
+        </section>
     </div>
 </template>
 
@@ -98,6 +144,9 @@ import CirclesElem from "./elements/CirclesElem.vue"
 import OurMission from "./elements/OurMission.vue"
 import ParallaxElem from "./elements/ParallaxElem.vue"
 import CardsElem from "./elements/CardsElem.vue"
+import StaffCard from "./elements/StaffCard.vue"
+import ParallaxElem2 from "./elements/ParallaxElem2.vue"
+import NewsCard from "./elements/NewsCard.vue"
 
     export default {
         name: 'MainComp',
@@ -109,6 +158,9 @@ import CardsElem from "./elements/CardsElem.vue"
             OurMission,
             ParallaxElem,
             CardsElem,
+            StaffCard,
+            ParallaxElem2,
+            NewsCard,
         },
         data(){
             return {
@@ -316,9 +368,104 @@ import CardsElem from "./elements/CardsElem.vue"
                         description: "Proin ut ligula a purus commodo malesuada id et purus."
                     }
 
+                ],
+                staff:[
+                    {
+                        img: "/img/team_01.jpg",
+                        title: "Ruth Richie",
+                        role: "Teacher",
+                        bio: "I have just finished my studies in Early Childhood Education and I am also the kid's yoga teacher here at Fable. I enjoy cooking, swimming and bike riding in my free time",
+                        social:[
+                            "/mail.png",
+                            "/facebook.png",
+                            "/pinterest.png"
+                        ]
+
+                        
+                    },
+                    {
+                        img: "/img/team_02.jpg",
+                        title: "Katie Willmore",
+                        role: "Assistant Teacher",
+                        bio: "My name is Katie. I grew up and studied in Canada. This is my second year at Fable and love every minute of it, making the children's learning experience fun.",
+                        social:[
+                            "/dribbble.png",
+                            "/stumbleupon.png",
+                            "/instagram.png"
+                        ]
+                    },
+                    {
+                        img: "/img/team_03.jpg",
+                        title: "Angelica Watson",
+                        role: "Lead Teacher",
+                        bio: "I hold a degree in Early Childhood Education and an advanced English language certificate. I have been working as a kindergarten teacher since 2002.",
+                        social:[
+                            "/bing.png",
+                            "/skype.png",
+                            "/linkedin.png"
+                        ]
+                    },
+                    {
+                        img: "/img/team_04.jpg",
+                        title: "Angel Lynn",
+                        role: "Teacher",
+                        bio: "I have completed a Graduate Diploma in Early Childhood Teaching. I have worked with children aged from six weeks to eight years. This is my second year at Fable.",
+                        social:[
+                            "/bing.png",
+                            "/skype.png",
+                            "/linkedin.png"
+                        ]
+                    },
+
+
+                ],
+                slide3:[
+                    "/img/parallax_01.jpg",
+                    "/img/parallax_02.jpg"
+                ],
+                quotes:[
+                    {
+                        quote: "Fable Kindergarten is a great place for my daughter to start her schooling experience. It's welcoming and safe and my daughter loves being there",
+                        author:"Joe R. Hamblen"
+                    },
+                    {
+                        quote: "lorem ipsum dolor sit amet, consectet, ",
+                        author:"Ipsum Lorem"
+                    }
+
+                ],
+                news1:[
+                    {
+                        date: "October 03, 2014",
+                        img: "img/blog_09.jpg",
+                        number: "42",
+                        title: "Drawing and Painting Lessons",
+                        author:"Anna Brown",
+                        genre: "Events, Fun",
+                        article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
+                    },
+                    {
+                        date: "October 03, 2014",
+                        img: "img/blog_10.jpg",
+                        number: "19",
+                        title: "Fall Parents Meeting Day",
+                        author:"Anna Brown",
+                        genre: "Dance, Education",
+                        article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
+                    },
+                    {
+                        date: "October 03, 2014",
+                        img: "img/blog_08.jpg",
+                        number: "22",
+                        title: "Fall Parents Meeting Day",
+                        author:"Anna Brown",
+                        genre: "Games, General",
+                        article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
+                    }
+
                 ]
             }
-
+            
         }
     }
 </script>
@@ -393,7 +540,7 @@ import CardsElem from "./elements/CardsElem.vue"
     }
 
     #goals{
-        height:65vh; 
+        height:70vh; 
         background-color:#e8e6e7;
         padding-top: 80px;
         padding-bottom: 80px;
@@ -428,5 +575,54 @@ import CardsElem from "./elements/CardsElem.vue"
                 }
             }
         }
+    }
+
+    #splitterImg{
+        img{
+            width: 25%;
+        }
+        margin-bottom: -4px;
+    }
+
+    #staffTop{
+        display: flex;
+        justify-content: space-between;
+        *{
+            flex-basis: calc(50% - 20px);
+        }
+        h1{
+            color: #554e9e;
+            font-weight: 100;
+        }
+        p{
+            opacity: 0.6;
+            font-weight: 600;
+        }
+    }
+
+    #staffTop, #staffTop{
+        margin-bottom: 50px;
+    }
+
+    #staffBot{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    #staffBot > *{
+        margin-bottom: 10px;
+        flex-basis: calc(50% - 20px);
+    }
+
+    #news{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .news-card{
+        width: calc((100% / 3) - 100px);
     }
 </style>
