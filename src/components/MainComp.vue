@@ -128,7 +128,7 @@
             <div id="news">
                 <NewsCard
                 class="news-card"
-                v-for="(elem, index) in news1"
+                v-for="(elem, index) in news"
                 :key="index"
                 :news="elem"
                 />
@@ -176,6 +176,9 @@ import MapElem from "./elements/MapElem.vue"
             ParallaxElem2,
             NewsCard,
             MapElem
+        },
+        props:{
+            news: Array
         },
         data(){
             return {
@@ -446,36 +449,6 @@ import MapElem from "./elements/MapElem.vue"
                     {
                         quote: "lorem ipsum dolor sit amet, consectet, ",
                         author:"Ipsum Lorem"
-                    }
-
-                ],
-                news1:[
-                    {
-                        date: "October 03, 2014",
-                        img: "img/blog_09.jpg",
-                        number: "42",
-                        title: "Drawing and Painting Lessons",
-                        author:"Anna Brown",
-                        genre: "Events, Fun",
-                        article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
-                    },
-                    {
-                        date: "October 03, 2014",
-                        img: "img/blog_10.jpg",
-                        number: "19",
-                        title: "Fall Parents Meeting Day",
-                        author:"Anna Brown",
-                        genre: "Dance, Education",
-                        article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
-                    },
-                    {
-                        date: "October 03, 2014",
-                        img: "img/blog_08.jpg",
-                        number: "22",
-                        title: "Fall Parents Meeting Day",
-                        author:"Anna Brown",
-                        genre: "Games, General",
-                        article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non dapibus augue. Praesent quam nisi, elementum at porttitor vel, lacinia sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean a facilisis justo. Etiam rutrum egestas leo nec rutrum. Fusce massa metus, vestibulum vel metus et, rutrum varius sem. Proin sit amet leo vel lacus vestibulum aliquet nec et neque. Phasellus egestas dui tellus. Curabitur semper imperdiet nibh et ornare. Curabitur nec magna dolor. Aenean faucibus ligula arcu, id placerat metus tincidunt id. Integer sodales auctor semper. Nunc id ligula sit amet odio lacinia rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer dolor tortor, lobortis vitae purus id, ornare ullamcorper felis."
                     }
 
                 ],
